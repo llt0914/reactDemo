@@ -1,13 +1,25 @@
 import React from 'react';
+import { renderRoutes, matchRoutes } from 'react-router-config'
+import { Provider } from 'react-redux'
+import store from '@/store'
+import 'antd/dist/antd.css'
 
-function App() {
+const App = ({ location, route }) => {
+  // const { route,history,match,location } = props
+  const branch = matchRoutes(route.routes, location.pathname);
+  branch.reverse()
+  for (const item of branch) {
+    const { meta } = item.route
+    if (meta && meta.title) {
+      document.title = meta.title
+      break
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        App
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      {renderRoutes(route.routes)}
+    </Provider>
+  )
 }
 
-export default App;
+export default App

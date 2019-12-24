@@ -1,7 +1,7 @@
 {
   "extends": [
     "react-app",
-    "airbnb" //代码检测标准
+    "airbnb"
   ],
   "plugins": [
     "html"
