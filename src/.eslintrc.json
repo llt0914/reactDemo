@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "react-app",
+    "airbnb" //代码检测标准
+  ],
+  "plugins": [
+    "html"
+  ],
+  "root": true,
+  "rules": {
+    "semi": 0,
+    "import/no-unresolved": 0,
+    "linebreak-style": 0,
+    "react/prop-types": 0,
+    "no-restricted-syntax": 0,
+    "react/jsx-closing-tag-location": 2,
+    "react/jsx-fragments": 0,
+    "comma-dangle": [2, "never"],
+    "consistent-return": 0,
+    "react/no-string-refs": 0,
+    "no-unused-expressions": 0,
+    "react/jsx-max-props-per-line": [1, {
+      "when": "always"
+    }],
+    "react/button-has-type": 0,
+    "no-console": 0,
+    "quotes": 0,
+    "no-return-assign":0,
+    "arrow-parens": [2, "as-needed"],
+    "no-param-reassign": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0
+  }
+}
