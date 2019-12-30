@@ -1,66 +1,98 @@
 import App from '@/App'
 import Home from '@/view/home/index'
+import HomeRoot from '@/view/homeRoot/index'
 import Homedemo1 from '@/view/home/homedemo1'
 import Homedemo2 from '@/view/home/homedemo2'
 import Homedemo3 from '@/view/home/homedemo3'
-import List from '@/view/list/index'
-import Self from '@/view/self/index'
+import Classify from '@/view/classify/index'
+import Recommend from '@/view/recommend/index'
+import Shopcart from '@/view/shopcart/index'
+import Owens from '@/view/owens/index'
 
 const routes = [
   {
     component: App,
     routes: [
       {
-        component: Home,
-        name: 'home',
+        component: HomeRoot,
+        name: 'homeRoot',
         path: '/',
         meta: {
-          title: 'home'
+          title: 'homeRoot'
         },
         routes: [
           {
-            component: Homedemo1,
-            name: 'homedemo1',
-            path: '/',
+            component: Home,
+            name: 'home',
+            path: ['/', '/homedemo2', '/homedemo3'],
             exact: true,
             meta: {
-              title: 'homedemo1'
+              title: '首页'
+            },
+            routes: [
+              {
+                component: Homedemo1,
+                name: 'homedemo1',
+                path: '/',
+                exact: true,
+                meta: {
+                  title: 'homedemo1'
+                }
+              },
+              {
+                component: Homedemo2,
+                name: 'homedemo2',
+                path: '/homedemo2',
+                meta: {
+                  title: 'homedemo2'
+                }
+              },
+              {
+                component: Homedemo3,
+                name: 'homedemo3',
+                path: '/homedemo3',
+                meta: {
+                  title: 'homedemo3'
+                }
+              }
+            ]
+          },
+          {
+            component: Classify,
+            name: 'classify',
+            path: '/classify',
+            meta: {
+              title: '分类'
             }
           },
           {
-            component: Homedemo2,
-            name: 'homedemo2',
-            path: '/homedemo2',
+            component: Recommend,
+            name: 'recommend',
+            path: '/recommend',
             meta: {
-              title: 'homedemo2'
+              title: '推荐'
             }
           },
           {
-            component: Homedemo3,
-            name: 'homedemo3',
-            path: '/homedemo3',
+            component: Shopcart,
+            name: 'shopcart',
+            path: '/shopcart',
             meta: {
-              title: 'homedemo3'
+              title: '购物车'
+            }
+          },
+          {
+            component: Owens,
+            name: 'owens',
+            path: '/owens',
+            meta: {
+              title: '个人中心'
             }
           }
         ]
-      },
-      {
-        component: List,
-        name: 'list',
-        path: '/list',
-        meta: {
-          title: 'list'
-        }
-      },
-      {
-        component: Self,
-        name: 'self',
-        path: '/self',
-        meta: {
-          title: 'self'
-        }
       }
+
+
     ]
   }
 ]

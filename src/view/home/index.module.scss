@@ -1,0 +1,24 @@
+.home{
+  .hometitle{
+    margin-top: 10px;
+    text-align: center;
+  }
+  .leftnavigation{
+    border-right: double 6px yellowgreen;
+    width: 200px;
+    list-style: none;
+    font-size: 20px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    li{
+      margin: 10px 0;
+      height: 20vh;
+    }
+  }
+  .rightContent{
+    box-sizing: border-box;
+    padding-left: 200px;
+    width: 100%;
+  }
+}

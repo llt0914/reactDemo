@@ -1,10 +1,10 @@
 import React from 'react';
 
-const List = () => (
+const Owens = () => (
   <div>
     <div>
-    List列表页面
+    个人中心
     </div>
   </div>
 )
-export default List
+export default Owens

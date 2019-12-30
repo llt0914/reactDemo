@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Self = () => (
+const Classify = () => (
   <div>
     <div>
-    Self列表页面
+    分类
     </div>
   </div>
 )
-export default Self
+export default Classify

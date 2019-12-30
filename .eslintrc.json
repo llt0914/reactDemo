@@ -6,6 +6,13 @@
   "plugins": [
     "html"
   ],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
   "root": true,
   "rules": {
     "semi": 0,
@@ -29,6 +36,8 @@
     "arrow-parens": [2, "as-needed"],
     "no-param-reassign": 0,
     "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/no-noninteractive-element-interactions": 0
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "react/self-closing-comp": 0,
+    "jsx-a11y/control-has-associated-label": 0
   }
 }
