@@ -8,7 +8,7 @@ import Classify from '@/view/classify/index'
 import Recommend from '@/view/recommend/index'
 import Shopcart from '@/view/shopcart/index'
 import Owens from '@/view/owens/index'
-
+//
 const routes = [
   {
     component: App,
